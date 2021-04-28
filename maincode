@@ -11,7 +11,7 @@
     c.onclick = () => (birdDY = 9) ;
     setInterval(() => {
       context.fillStyle = new Image();
-      canvas.src = "canvas.png";
+      canvas.src = "canvas.jpg";
       birdY -= birdDY -= 0.5; // Gravity
       context.drawImage(bird, birdX, birdY, birdSize * (524/374), birdSize); // Draw bird
       context.fillStyle = "green";
