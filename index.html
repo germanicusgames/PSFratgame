@@ -3,15 +3,15 @@
   <script>
     context = c.getContext("2d");
     const bird = new Image();
-    bird.src = "bird.png";
+    bird.src = "rattoken.png";
     birdX = birdDY = score = bestScore = 0;
     interval = birdSize = pipeWidth = topPipeBottomY = 24;
     birdY = pipeGap = 200;
     canvasSize = pipeX = 400;
     c.onclick = () => (birdDY = 9) ;
     setInterval(() => {
-      context.fillStyle = new Image();
-      canvas.src = "canvas.jpg";
+      context.fillStyle = "skyblue";
+      context.fillRect(0,0,canvasSize,canvasSize); // Draw sky
       birdY -= birdDY -= 0.5; // Gravity
       context.drawImage(bird, birdX, birdY, birdSize * (524/374), birdSize); // Draw bird
       context.fillStyle = "green";
@@ -30,4 +30,3 @@
     }, interval)
   </script>
 </body>
-© 2021 GitHub, Inc.
