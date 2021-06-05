@@ -1,7 +1,4 @@
 <body style="height: 100vh; background: #111; text-align: center;touch-action: manipulation;">
-    const setBackground = (image) => { 
-    document.body.style.background = "canvas.jpg";
-};
   <canvas id="c" width="400" height="400"></canvas>
   <script>
     context = c.getContext("2d");
@@ -13,7 +10,8 @@
     canvasSize = pipeX = 400;
     c.onclick = () => (birdDY = 9) ;
     setInterval(() => {
-      context.fillStyle = "skyblue";
+      context.fillStyle = new image();
+      sky.src = "canvas.jpg"  
       context.fillRect(0,0,canvasSize,canvasSize); // Draw sky
       birdY -= birdDY -= 0.5; // Gravity
       context.drawImage(bird, birdX, birdY, birdSize * (524/374), birdSize); // Draw bird
