@@ -2,8 +2,6 @@
   <canvas id="c" width="400" height="400"></canvas>
   <script>
     context = c.getContext("2d");
-    const sky = new Image();
-    sky.src = "canvas.jpg"
     const bird = new Image();
     bird.src = "rattoken.png";
     birdX = birdDY = score = bestScore = 0;
@@ -12,7 +10,7 @@
     canvasSize = pipeX = 400;
     c.onclick = () => (birdDY = 9) ;
     setInterval(() => {
-      context.fillstyle = "sky";
+      context.fillstyle = "skyblue";
       context.fillRect(0,0,canvasSize,canvasSize); // Draw sky
       birdY -= birdDY -= 0.5; // Gravity
       context.drawImage(bird, birdX, birdY, birdSize * (524/374), birdSize); // Draw bird
