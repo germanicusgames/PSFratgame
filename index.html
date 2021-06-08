@@ -4,14 +4,15 @@
     context = c.getContext("2d");
     const bird = new Image();
     bird.src = "rattoken.png";
+    const sky = new Image();
+    sky.src = "canvas.jpg";
     birdX = birdDY = score = bestScore = 0;
     interval = birdSize = pipeWidth = topPipeBottomY = 24;
     birdY = pipeGap = 200;
     canvasSize = pipeX = 400;
     c.onclick = () => (birdDY = 9) ;
     setInterval(() => {
-      context.fillStyle = "skyblue";
-      context.fillRect(0,0,canvasSize,canvasSize); // Draw sky
+      context.drawImage( sky, skyX, skyY, skySize * (0/0), birdSize); // Draw sky
       birdY -= birdDY -= 0.5; // Gravity
       context.drawImage(bird, birdX, birdY, birdSize * (524/374), birdSize); // Draw bird
       context.fillStyle = "green";
