@@ -1,10 +1,9 @@
 <body style="height: 100vh; background: #111; text-align: center;touch-action: manipulation;">
- <p>Image to use:</p>
+<p>Image to use:</p>
 <img id="cityline" width="400" height="400" src="cityline.png" alt="cityline">
 <p>Canvas:</p>
 <canvas id="c" width="400" height="400" style="border:1px solid #d3d3d3;">
 </canvas>
-
 <script>
 window.onload = function() {
   var c = document.getElementById("c");
@@ -15,11 +14,6 @@ window.onload = function() {
 </script>
  
  <script>
-   window.onload = function() {
-  var c = document.getElementById("c");
-  var ctx = c.getContext("2d");
-  var img = document.getElementById("cityline");
-  ctx.drawImage(img, 10, 10);
     context = c.getContext("2d");
     const bird = new Image();
     bird.src = "rattoken.png";
