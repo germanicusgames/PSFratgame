@@ -8,9 +8,8 @@
 window.onload = function() {
   var c = document.getElementById("c");
   var ctx = c.getContext("2d");
-  const cityline = new Image();
-    cityline.src = "cityline.png";
-  var img = document.getElementById("cityline");
+  var img = new Image("cityline");
+    cityline.src = "cityline.png";;
   ctx.drawImage(img, 10, 10);
 }
 </script>
