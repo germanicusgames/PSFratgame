@@ -2,16 +2,14 @@
 <html>
 <body>
 
-<p>Image to use:</p>
-<img id="cityline" width="400" height="400" src="cityline.png" alt="cityline">
-
-<p>Canvas:</p>
 <canvas id="c" width="400" height="400"></canvas>
 
 <script>
 window.onload = function() {
   var c = document.getElementById("c");
   var ctx = c.getContext("2d");
+  const cityline = new Image();
+    cityline.src = "cityline.png";
   var img = document.getElementById("cityline");
   ctx.drawImage(img, 10, 10);
 }
