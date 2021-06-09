@@ -1,10 +1,6 @@
 <body style="height: 100vh; background: #111; text-align: center;touch-action: manipulation;">
   <canvas id="c" width="400" height="400"></canvas>
   function draw(){
-    var drawing = document.getElementById("drawing");
-    var con = drawing.getContext("2d");
-    var cityline = document.getElementById("cityline");
-    con.drawImage(cityline, 0, 0, 50, 50);
     var image2 = new Image();
     image2.src = "cityline.png";
     con.drawImage(image2, 100, 100, 70, 50);
