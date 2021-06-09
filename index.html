@@ -8,13 +8,19 @@
     interval = birdSize = pipeWidth = topPipeBottomY = 24;
     birdY = pipeGap = 200;
     canvasSize = pipeX = 400;
+    // create new image object to use as pattern
+  var img = new Image();
+  img.src = 'pipes.png';
+  img.onload = function() {
     c.onclick = () => (birdDY = 9) ;
     setInterval(() => {
       context.fillStyle = "skyblue";
       context.fillRect(0,0,canvasSize,canvasSize); // Draw sky
       birdY -= birdDY -= 0.5; // Gravity
       context.drawImage(bird, birdX, birdY, birdSize * (524/374), birdSize); // Draw bird
-      context.fillStyle = "green";
+    var ptrn = ctx.createPattern(pipes, 'repeat');
+    ctx.fillStyle = ptrn;
+    ctx.fillRect(0, 0, 150, 150);
       pipeX -= 8; // Move pipe
       pipeX < -pipeWidth && // Pipe off screen?
         ((pipeX = canvasSize), (topPipeBottomY = pipeGap * Math.random())); // Reset pipe and randomize gap.
