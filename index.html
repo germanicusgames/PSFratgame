@@ -1,13 +1,14 @@
-<body style="height: 100vh; background: #111; text-align: center;touch-action: manipulation;">
+<body>
+<p>Image to use:</p>
 <img id="cityline" width="400" height="400" src="cityline.png" alt="cityline">
 <canvas id="c" width="400" height="400" style="border:1px solid #d3d3d3;">
 </canvas>
 <script>
 window.onload = function() {
-  var c = document.getElementById("c");
+  var c = document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
-  var img = document.getElementById("cityline");
-  ctx.drawImage(img, 400, 400);
+  var img = document.getElementById("scream");
+  ctx.drawImage(img, 0, 0);
     context = c.getContext("2d");
     const bird = new Image();
     bird.src = "rattoken.png";
@@ -17,8 +18,6 @@ window.onload = function() {
     canvasSize = pipeX = 400;
     c.onclick = () => (birdDY = 9) ;
     setInterval(() => {
-      context.fillStyle = "skyblue";
-      context.fillRect(0,0,canvasSize,canvasSize); // Draw sky
       birdY -= birdDY -= 0.5; // Gravity
       context.drawImage(bird, birdX, birdY, birdSize * (524/374), birdSize); // Draw bird
       context.fillStyle = "green";
