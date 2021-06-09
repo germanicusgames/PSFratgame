@@ -4,6 +4,9 @@
     context = c.getContext("2d");
     const bird = new Image();
     bird.src = "rattoken.png";
+    var pipes = new Image();
+  pipes.src = 'pipes.jpg';
+  img.onload = function() {
     birdX = birdDY = score = bestScore = 0;
     interval = birdSize = pipeWidth = topPipeBottomY = 24;
     birdY = pipeGap = 200;
@@ -14,7 +17,9 @@
       context.fillRect(0,0,canvasSize,canvasSize); // Draw sky
       birdY -= birdDY -= 0.5; // Gravity
       context.drawImage(bird, birdX, birdY, birdSize * (524/374), birdSize); // Draw bird
-      context.fillStyle = "green";
+      var ptrn = ctx.createPattern(pipes, 'repeat');
+    ctx.fillStyle = ptrn;
+    ctx.fillRect(0, 0, 150, 150);
       pipeX -= 8; // Move pipe
       pipeX < -pipeWidth && // Pipe off screen?
         ((pipeX = canvasSize), (topPipeBottomY = pipeGap * Math.random())); // Reset pipe and randomize gap.
