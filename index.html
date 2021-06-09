@@ -1,9 +1,10 @@
 <body style="height: 100vh; background: #111; text-align: center;touch-action: manipulation;">
+ <p>Image to use:</p>
+<img id="cityline" width="400" height="400" src="cityline.png" alt="cityline">
+  <p>Canvas:</p>
   <canvas id="c" width="400" height="400"></canvas>
   <script>
     context = c.getContext("2d");
-    <p>Image to use:</p>
-<img id="cityline" width="400" height="400" src="cityline.png" alt="cityline">;
     const bird = new Image();
     bird.src = "rattoken.png";
     birdX = birdDY = score = bestScore = 0;
