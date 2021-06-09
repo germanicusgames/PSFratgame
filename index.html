@@ -1,13 +1,18 @@
 <body style="height: 100vh; background: #111; text-align: center;touch-action: manipulation;">
-  <canvas id="c" width="400" height="400">
-    const cityline = new Image()
-    cityline.src = "cityline.png";
-  <img src="cityline.png" width="400" height="400" alt=""/>
-</canvas>
+  <canvas id="c" width="400" height="400"></canvas>
+  function draw(){
+    var drawing = document.getElementById("drawing");
+    var con = drawing.getContext("2d");
+    var cityline = document.getElementById("cityline");
+    con.drawImage(cityline, 0, 0, 50, 50);
+    var image2 = new Image();
+    image2.src = "cityline.png";
+    con.drawImage(image2, 100, 100, 70, 50);
+  } // end draw
   <script>
     context = c.getContext("2d");
     const bird = new Image();
-    bird.src = "bird.png";
+    bird.src = "rattoken.png";
     birdX = birdDY = score = bestScore = 0;
     interval = birdSize = pipeWidth = topPipeBottomY = 24;
     birdY = pipeGap = 200;
