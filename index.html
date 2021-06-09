@@ -1,5 +1,4 @@
 <body>
-<p>Image to use:</p>
 <img id="cityline" width="400" height="400" src="cityline.png" alt="cityline">
 <canvas id="c" width="400" height="400" style="border:1px solid #d3d3d3;">
 <canvas>
@@ -9,7 +8,6 @@ window.onload = function() {
   var ctx = c.getContext("2d");
   var img = document.getElementById("cityline");
   ctx.drawImage(img, 0, 0);
-    context = c.getContext("2d");
     const bird = new Image();
     bird.src = "rattoken.png";
     birdX = birdDY = score = bestScore = 0;
