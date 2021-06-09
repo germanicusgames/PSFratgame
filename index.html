@@ -4,6 +4,11 @@
   <p>Canvas:</p>
   <canvas id="c" width="400" height="400"></canvas>
   <script>
+   window.onload = function() {
+  var c = document.getElementById("c");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("cityline");
+  ctx.drawImage(img, 10, 10);
     context = c.getContext("2d");
     const bird = new Image();
     bird.src = "rattoken.png";
