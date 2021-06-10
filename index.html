@@ -4,6 +4,7 @@
     context = c.getContext("2d");
     const bird = new Image();
     bird.src = "rattoken.png";
+    context = c.getContext("2d");
     const cityline = new Image();
     cityline.src = "cityline.png";
     birdX = birdDY = score = bestScore = 0;
@@ -13,8 +14,10 @@
     c.onclick = () => (birdDY = 9) ;
     setInterval(() => {
       //context.fillStyle = "rgba(255, 255, 255, 0)";
-       //context.drawImage(cityline, canvasSize, canvasSize);
-      context.fillRect(cityline, 0, 0,canvasSize,canvasSize); // Draw sky
+      function draw () {
+        context.drawImage(cityline, 0, 0);
+      }
+      // context.fillRect(cityline, 0, 0,canvasSize,canvasSize); // Draw sky
         birdY -= birdDY -= 0.5; // Gravity
       context.drawImage(bird, birdX, birdY, birdSize * (524/374), birdSize); // Draw bird
       context.fillStyle = "green";
