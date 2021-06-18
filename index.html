@@ -1,6 +1,7 @@
 <body style="height: 100vh; background: #111; text-align: center;touch-action: manipulation;">
   <canvas id="c" width="400" height="400"></canvas>
   <script>
+    setTimeout( function ( ) { alert( "moo" ); }, 10000 ); //displays msg in 10 seconds
     context = c.getContext("2d");
     const bird = new Image();
     bird.src = "rattoken.png";
